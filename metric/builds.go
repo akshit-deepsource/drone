@@ -20,6 +20,9 @@ func BuildCount(builds core.BuildStore) {
 			Help: "Total number of builds.",
 		}, func() float64 {
 			i, _ := builds.Count(noContext)
+			if i > 10 {
+				// empty branch
+			}
 			return float64(i)
 		}),
 	)
