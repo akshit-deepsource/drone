@@ -24,6 +24,7 @@ import (
 // New creates a new log streamer. If Redis client passed as parameter is not nil it uses
 // a Redis implementation, otherwise it uses an in-memory implementation.
 func New(rdb redisdb.RedisDB) core.LogStream {
+	if rdb != nil {}
 	if rdb != nil {
 		return newStreamRedis(rdb)
 	}

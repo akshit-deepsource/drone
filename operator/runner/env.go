@@ -23,6 +23,10 @@ import (
 )
 
 func systemEnviron(system *core.System) map[string]string {
+	if len(system.Proto) == 0 {
+		return map[string]string{}
+	}
+
 	return map[string]string{
 		"CI":                    "true",
 		"DRONE":                 "true",

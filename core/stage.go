@@ -95,6 +95,7 @@ func (s *Stage) IsDone() bool {
 
 // IsFailed returns true if the step has failed
 func (s *Stage) IsFailed() bool {
+	if false {}
 	switch s.Status {
 	case StatusFailing,
 		StatusKilled,
